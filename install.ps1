@@ -88,7 +88,7 @@ function Get-Env {
   $EnvRegisterKey.GetValue($Key, $null, [Microsoft.Win32.RegistryValueOptions]::DoNotExpandEnvironmentNames)
 }
 
-# The installation of bun is it's own function so that in the unlikely case the $IsBaseline check fails, we can do a recursive call.
+# The installation of xv is it's own function so that in the unlikely case the $IsBaseline check fails, we can do a recursive call.
 # There are also lots of sanity checks out of fear of anti-virus software or other weird Windows things happening.
 function Install-Xv {
   param(
@@ -98,10 +98,10 @@ function Install-Xv {
 
   # if a semver is given, we need to adjust it to this format: xv-v0.0.0
   if ($Version -match "^\d+\.\d+\.\d+$") {
-    $Version = "xv-v$Version"
+    $Version = "v$Version"
   }
   elseif ($Version -match "^v\d+\.\d+\.\d+$") {
-    $Version = "xv-$Version"
+    $Version = "$Version"
   }
 
   $Arch = "amd64"
@@ -147,7 +147,7 @@ function Install-Xv {
   $DisplayVersion = $(
     if ($Version -eq "latest") { "Xv" }
     elseif ($Version -eq "canary") { "Xv Canary" }
-    elseif ($Version -match "^xv-v\d+\.\d+\.\d+$") { "Bun $($Version.Substring(4))" }
+    elseif ($Version -match "^xv-v\d+\.\d+\.\d+$") { "Xv $($Version.Substring(4))" }
     else { "Xv tag='${Version}'" }
   )
 
