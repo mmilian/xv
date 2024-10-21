@@ -147,7 +147,7 @@ function Install-Xv {
   $DisplayVersion = $(
     if ($Version -eq "latest") { "Xv" }
     elseif ($Version -eq "canary") { "Xv Canary" }
-    elseif ($Version -match "^xv-v\d+\.\d+\.\d+$") { "Xv $($Version.Substring(4))" }
+    elseif ($Version -match "^v\d+\.\d+\.\d+$") { "Xv $($Version.Substring(4))" }
     else { "Xv tag='${Version}'" }
   )
 
