@@ -181,7 +181,7 @@ function Install-Xv {
   try {
     $lastProgressPreference = $global:ProgressPreference
     $global:ProgressPreference = 'SilentlyContinue';
-    Expand-Archive "$ZipPath" "$XvBin" -Force
+    Expand-Archive "$ZipPath" "${XvBin}\$Target" -Force
     $global:ProgressPreference = $lastProgressPreference
     if (!(Test-Path "${XvBin}\$Target\xv.exe")) {
       throw "The file '${XvBin}\$Target\xv.exe' does not exist. Download is corrupt or intercepted Antivirus?`n"
