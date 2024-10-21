@@ -1,7 +1,7 @@
 #!/usr/bin/env pwsh
 param(
   # Specify the exact version of xv to install.
-  [String]$Version = "latest",
+  [String]$Version = "1.0.0",
   # Forces installing the baseline build regardless of what CPU you are actually using.
   [Switch]$ForceBaseline = $false,
   # Skips adding the xv.exe directory to the user's %PATH%
@@ -104,7 +104,7 @@ function Install-Xv {
     $Version = "xv-$Version"
   }
 
-  $Arch = "x64"
+  $Arch = "amd64"
   $IsBaseline = $ForceBaseline
   if (!$IsBaseline) {
     $IsBaseline = !( `
@@ -147,8 +147,8 @@ function Install-Xv {
   $DisplayVersion = $(
     if ($Version -eq "latest") { "Xv" }
     elseif ($Version -eq "canary") { "Xv Canary" }
-    elseif ($Version -match "^bun-v\d+\.\d+\.\d+$") { "Bun $($Version.Substring(4))" }
-    else { "Bun tag='${Version}'" }
+    elseif ($Version -match "^xv-v\d+\.\d+\.\d+$") { "Bun $($Version.Substring(4))" }
+    else { "Xv tag='${Version}'" }
   )
 
   $null = mkdir -Force $XvBin
