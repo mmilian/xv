@@ -139,7 +139,7 @@ function Install-Xv {
   if ($IsBaseline) {
     $Target = "xv-windows-$Arch-baseline"
   }
-  $BaseURL = "https://github.com/creoox/xv-dist/releases"
+  $BaseURL = "https://github.com/mmilian/xv-dist/releases"
   $URL = "$BaseURL/$(if ($Version -eq "latest") { "latest/download" } else { "download/$Version" })/$Target.zip"
 
   $ZipPath = "${XvBin}\$Target.zip"
