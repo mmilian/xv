@@ -1,4 +1,4 @@
-# XV
+# xv - xeoVision Services in the command line!
 ## Windows Installation Guide
 ### Installation
 
