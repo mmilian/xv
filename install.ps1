@@ -193,7 +193,7 @@ function Install-Xv {
   }
 
   Move-Item "${XvBin}\$Target\xv.exe" "${XvBin}\xv.exe" -Force
-  Move-Item "${XvBin}\$Target\unistall.ps1" "${XvRoot}\scripts\unistall.ps1" -Force
+  Move-Item "${XvBin}\$Target\scripts\unistall.ps1" "${XvRoot}\unistall.ps1" -Force
 
   Remove-Item "${XvBin}\$Target" -Recurse -Force
   Remove-Item $ZipPath -Force
