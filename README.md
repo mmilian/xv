@@ -32,7 +32,7 @@ In PowerShell (Permanently for Current User):
 ```
 
 <details>
-  <summary>Alternatively </summary>
+  <summary>Alternatively (env for session, other shells)</summary>
 
 In PowerShell (Current Session):
 
@@ -90,12 +90,11 @@ Run the uninstall script with execution policy bypassed for this command only
 powershell -ExecutionPolicy Bypass -File "$HOME\.xv\uninstall.ps1"
 ```
 
-Note:
-
+<details>
+<summary> Note: </summary>
 If XV was installed in a different directory, replace $HOME\\.xv\uninstall.ps1 with the correct path.
 There is no need to change the directory; the command specifies the full path to the uninstall script.
-Additional Information
-Help and Documentation:
+</details>
 
 ## Usage
 
@@ -105,9 +104,9 @@ For more information on XV commands and options, you can view the help documenta
 xv --help
 ```
 
-or check [docs.xeo.vision](https://docs.xeo.vision)
+or check our [docs.xeo.vision](https://docs.xeo.vision)
 
 ## Support:
 
 If you encounter any issues or have questions, please refer to the official documentation or contact the support team.
-[docs.xeo.vision](https://docs.xeo.vision)
+[docs.xeo.vision/contact]https://docs.xeovision.io/contact/)
