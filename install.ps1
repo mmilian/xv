@@ -238,7 +238,7 @@ function Install-Xv {
   $C_RESET = [char]27 + "[0m"
   $C_GREEN = [char]27 + "[1;32m"
 
-  Write-Output "${C_GREEN}Xv ${DisplayVersion} was installed successfully!${C_RESET}"
+  Write-Output "${C_GREEN}xv ${DisplayVersion} was installed successfully!${C_RESET}"
   Write-Output "The binary is located at ${XvBin}\xv.exe`n"
 
   $hasExistingOther = $false;
