@@ -16,7 +16,7 @@ jobs:
       - name: Notify about a new release
         run: | 
           cx teams notify \
-          -w ${{ secrets.TEAMS_WEBHOOK }}" \
+          -w "${{ secrets.TEAMS_WEBHOOK }}" \
           -v "v${{ github.event.release.tag_name }}" \
           -s "New pre-release version of ifc2glbconverter" \
           -m "available to test" \
