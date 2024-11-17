@@ -11,7 +11,7 @@ jobs:
       - name: Install deployment-time prerequisites
         run: |
          echo "Installing cx from Creoox/cx using token ${{ secrets.GH_TOKEN2 }}"
-         curl -X GET -H "Authorization: token ${GH_TOKEN}" https://raw.githubusercontent.com/Creoox/cx/main/src/cx.clj > /usr/local/bin/cx
+         curl -X GET -H "Authorization: token ${GH_TOKEN2}" https://raw.githubusercontent.com/Creoox/cx/main/src/cx.clj > /usr/local/bin/cx
          chmod +x /usr/local/bin/cx
       - name: Notify about a new release
         run: | 
